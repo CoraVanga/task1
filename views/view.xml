@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_task_tree" model="ir.ui.view">
+        <field name="name">View</field>
+        <field name="model">task.task1</field>
+        <field name="arch" type="xml">
+            <tree string="task1">
+                <field name='name'></field>
+                <field name='number'></field>
+                <field name='binary'></field>
+                <field name='boolean'></field>
+                <field name='ngay'></field>
+                <field name='thoigian'></field>
+                <field name='Float'></field>
+                <field name='text'></field>
+                <field name='html'></field>
+                <field name='gender'></field>
+            </tree>
+        </field>
+    </record>
+
+    <!-- <record id="view_test_search" model="ir.ui.view">
+        <field name="name">View</field>
+        <field name="model">test.test</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="number"/>
+                <field name="desc"/>
+            </search>
+        </field>
+    </record> -->
+
+    <record id="view_task_form" model="ir.ui.view">
+        <field name="name">Form</field>
+        <field name="model">task.task1</field>
+        <field name="arch" type="xml">
+            <form string="test">
+                <group>
+                    <field name='name'></field>
+                    <field name='number'></field>
+                    <field name='binary'></field>
+                    <field name='boolean'></field>
+                    <field name='ngay'></field>
+                    <field name='thoigian'></field>
+                    <field name='Float'></field>
+                    <field name='text'></field>
+                    <field name='html'></field>
+                    <field name='gender'></field>
+                    <field name="one2many_id">
+                        <tree editable="bottom">
+                            <field name="product"/>
+                        </tree>
+                    </field>
+                    <field name='many2one_id'></field>
+                    <field name='pro_ids'></field>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- <record id="view_test_calendar" model="ir.ui.view">
+        <field name="name">Calendar</field>
+        <field name="model">test.test</field>
+        <field name="arch" type="xml">
+            <calendar string="Ideas" date_start="x_ngay">
+                <field name="name"/>
+            </calendar>
+        </field>
+    </record> -->
+</odoo>

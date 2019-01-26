@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_task_tree" model="ir.ui.view">
+        <field name="name">View</field>
+        <field name="model">task.product</field>
+        <field name="arch" type="xml">
+            <tree string="task1">
+                <field name='namepro'></field>
+                <field name='qty'></field>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_task_form" model="ir.ui.view">
+        <field name="name">Form</field>
+        <field name="model">task.task1</field>
+        <field name="arch" type="xml">
+            <form string="test">
+                <group>
+                    <field name='name'></field>
+                    <field name='number'></field>
+                    <field name='binary'></field>
+                    <field name='boolean'></field>
+                    <field name='ngay'></field>
+                    <field name='thoigian'></field>
+                    <field name='Float'></field>
+                    <field name='text'></field>
+                    <field name='html'></field>
+                    <field name='gender'></field>
+                    <field name="one2many_id">
+                        <tree editable="bottom">
+                            <field name="product"/>
+                        </tree>
+                    </field>
+                    <field name='many2one_id'></field>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <act_window id="action_task1"
+            name="Task_1"
+            res_model="task.task1"
+            view_mode="tree,form"/>
+
+    <menuitem
+      id="task_root_menu"
+      name="Task 1"
+      sequence="1000000"
+      action="action_task1"/>
+</odoo>
