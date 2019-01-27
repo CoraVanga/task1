@@ -12,6 +12,12 @@ from datetime import datetime, timedelta
 
 class task1_task1(models.Model):
     _name = 'task.task1'
+
+    @api.model
+    def _select_objects(self):
+        records = self.env['ir.model'].search([])
+        return [(record.model, record.name) for record in records] + [('', '')]
+
     name = fields.Char(string='Name', required=True)
     number = fields.Integer(string='Number')
     binary = fields.Binary(string='Binary')
@@ -30,6 +36,7 @@ class task1_task1(models.Model):
     one2many_id = fields.One2many('task.one2many','many2one_id',string='Detail one 2 many')
     many2one_id = fields.Many2one('task.product',string='Many 2 one Selection')
     pro_ids = fields.Many2many('task.product','task_product_rel','task_id','pro_id',string='Many 2 many')
+    ref = fields.Reference(string='Reference record',selection='_select_objects');
     # detail_ids = fields.One2many('test.detail','id', string='Detail')
 
 # class test_detail(models.Model):
